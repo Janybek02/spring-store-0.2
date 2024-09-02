@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>save</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<!--<div class="page">-->
+<!--    <form th:method="POST" th:action="@{/products}" th:object="${saveProducts}">-->
+<!--        <label class="page-name name" />-->
+<!--        <input type="text" id="name" th:field="*{name}">-->
+<!--        <label class="page-name description"/>-->
+<!--        <input type="text" id="description" th:field="*{description}">-->
+<!--        <label class="page-name price"/>-->
+<!--        <input type="number" id="price" th:field="*{price}">-->
+<!--        <input type="submit" value="create products">-->
+<!--    </form>-->
+<!--</div>-->
+<div class=" w-[100%] flex items-center justify-around m-3.5 ">
+    <div class="w-[40%]">
+        <form th:method="POST" th:action="@{/products}" th:object="${saveProducts}" class="max-w-sm mx-auto">
+            <div class="mb-5">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+                <input type="text" id="email" th:field="*{name}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="name@flowbite.com" required />
+            </div>
+            <div class="mb-5">
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+                <input type="text" th:field="*{description}" id="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+            </div>
+            <div class="mb-5">
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+                <input type="number" th:field="*{price}" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+            </div>
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+        </form>
+    </div>
+    <div class="picture w-[30%] h-[300px] bg-slate-200">
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

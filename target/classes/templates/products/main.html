@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="main  ">
+    <div class="relative overflow-x-auto flex h-[500px]  items-center justify-center">
+        <div>
+        </div>
+        <div class="w-[50%] text-sm text-left rtl:text-right text-black rounded-2xl shadow-2xl">
+            <div class="text-xs  text-gray-700 uppercase bg-slate-200 flex items-center justify-between                                              ">
+                <p class="px-6 py-3 text-black ">
+                    Product name
+                </p>
+                <p scope="col" class="px-6 py-3">
+                    Color
+                </p>
+                <p scope="col" class="px-6 py-3">
+                    Category
+                </p>
+                <p scope="col" class="px-6 py-3">
+                    Price
+                </p>
+                <p scope="col" class="px-6 py-3">
+
+                </p>
+
+            </div>
+            <div>
+            <div th:each="items : ${products}" class="bg-white border-black border-solid border-t flex items-center justify-between ">
+                <p th:text="${items.getName()}" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                </p>
+                <p th:text="${items.getDescription()}"class="px-6 py-4">
+                </p>
+                <p th:text="${items.getPrice()}" class="px-6 py-4">
+                </p>
+                <p class="px-6 py-4">
+                    $2999
+                </p>
+                <div class="px-6 py-4 flex items-center justify-between">
+                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Default</button>
+                    <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">Dark</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
